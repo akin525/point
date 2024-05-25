@@ -106,7 +106,7 @@
             <div class="flex h-full w-full transform-gpu flex-col bg-white transition-transform duration-200 dark:bg-navy-700" style="overflow-y:scroll;"
             x-transition:enter="ease-out" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="ease-in" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" style="">
                 <div class="h-24">
-                  <img class="h-full w-full object-cover object-center" src="{{ url('/images/banner/app-back.jpg') }}" alt="image">
+                  <img class="h-full w-full object-cover object-center" src="{{ url($admin_data->profile_image) }}" alt="image">
                 </div>
                 <div class="flex space-x-5 px-5">
                   <div class="avatar -mt-5 h-20 w-20">
@@ -203,7 +203,7 @@
                               </div>
                             </a>
                           </li>
-             
+
                         </ul>
                       </li>
 
@@ -456,14 +456,14 @@
                         <a href="{{ route('admin.csm_banners')}}" class="flex items-center gap-2 group flex space-x-2 rounded-lg px-4 py-2.5 tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100 py-2 text-xs+ tracking-wide text-slate-500 outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50">
                             <i class="fa-solid fa-bookmark"></i> Banners
                         </a>
-                    </li> 
-                    
+                    </li>
+
                     <li>
                         <a href="{{ route('admin.csm_app_settings')}}" class="flex items-center gap-2 group flex space-x-2 rounded-lg px-4 py-2.5 tracking-wide outline-none transition-all hover:bg-slate-100 hover:text-slate-800 focus:bg-slate-100 focus:text-slate-800 dark:hover:bg-navy-600 dark:hover:text-navy-100 dark:focus:bg-navy-600 dark:focus:text-navy-100 py-2 text-xs+ tracking-wide text-slate-500 outline-none transition-[color,padding-left] duration-300 ease-in-out hover:text-slate-800 dark:text-navy-200 dark:hover:text-navy-50">
                              <i class="fa-solid fa-screwdriver-wrench"></i> App settings
                         </a>
                     </li>
-                    
+
                         <li x-data="accordionItem('menu-item-5')">
                             <a
                             :class="expanded &amp;&amp; 'text-slate-800 font-semibold dark:text-navy-50'"
@@ -559,7 +559,7 @@
                             </li>
                           </ul>
                         </li>
-                    
+
                   </ul>
 
                 <div class="p-5">
