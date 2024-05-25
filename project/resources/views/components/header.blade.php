@@ -106,11 +106,11 @@
             <div class="flex h-full w-full transform-gpu flex-col bg-white transition-transform duration-200 dark:bg-navy-700" style="overflow-y:scroll;"
             x-transition:enter="ease-out" x-transition:enter-start="-translate-x-full" x-transition:enter-end="translate-x-0" x-transition:leave="ease-in" x-transition:leave-start="translate-x-0" x-transition:leave-end="-translate-x-full" style="">
                 <div class="h-24">
-                  <img class="h-full w-full object-cover object-center" src="{{ url($admin_data->profile_image) }}" alt="image">
+                  <img class="h-full w-full object-cover object-center" src="{{ url('/images/banner/app-back.jpg') }}" alt="image">
                 </div>
                 <div class="flex space-x-5 px-5">
                   <div class="avatar -mt-5 h-20 w-20">
-                    <img class="rounded-full border-2 border-white dark:border-navy-700" src="{{url($admin_data->profile_image)}}" alt="avatar">
+                    <img class="rounded-full border-2 border-white dark:border-navy-700" src="{{url($admin_data->profile_logo)}}" alt="avatar">
 
                   </div>
                   <div class="mt-2 w-full" style="margin-left:10px;">
