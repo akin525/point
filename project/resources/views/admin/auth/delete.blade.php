@@ -43,7 +43,7 @@
       <div class="fixed top-0 hidden p-6 lg:block lg:px-12">
         <a href="#" class="flex items-center space-x-2">
           <p class="text-xl font-semibold uppercase text-slate-700 dark:text-navy-100">
-            {{$admin->site_name}}
+            Mega Free Point
           </p>
         </a>
       </div>
@@ -70,7 +70,7 @@
           <div class="text-center">
             <img style="height:20px;"
               class="mx-auto  lg:hidden"
-              src="{{$admin->profile_logo}}"
+              src="https://mobile.savebills.com.ng/images/csm/codesellmarket-noti-1716676638.webp"
               alt="logo"
             />
             <div class="mt-4">
