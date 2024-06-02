@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('delete', [AuthenticatedSessionController::class, 'deleteacc'])->name('delete');
+Route::post('deleted', [AuthenticatedSessionController::class, 'removed'])->name('deleted');
 Route::get('/refer/{refer_id}','UserController@refer')->name('refer');
 
 Route::get('/data-delete','Admin\HomeController@account_deletion')->name('account_deletion');

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Auth\LoginRequest;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -50,5 +51,23 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    public function deleteacc()
+    {
+        return view('admin.auth.delete');
+    }
+
+    public function removed(Request $request)
+    {
+        $request->validate([
+            'email'=>'required',
+        ]);
+
+        $delete=User::where('email', $request->email)->first();
+        $delete->status=1;
+        $delete->save();
+
+        return back()->with('status', 'Account delete successful');
     }
 }
